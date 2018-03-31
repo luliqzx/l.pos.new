@@ -1,0 +1,14 @@
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\L.Pos.DataAccess.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\L.Pos.DataAccess.pdb
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\L.Pos.Domain.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\L.Pos.Domain.pdb
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\obj\Debug\L.Pos.DataAccess.csprojResolveAssemblyReference.cache
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\obj\Debug\L.Pos.DataAccess.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\obj\Debug\L.Pos.DataAccess.pdb
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\FluentNHibernate.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\Iesi.Collections.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\NHibernate.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\FluentNHibernate.pdb
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\FluentNHibernate.xml
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\Iesi.Collections.xml
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.DataAccess\bin\Debug\NHibernate.xml
