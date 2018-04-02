@@ -11,11 +11,13 @@ namespace L.Pos.Web.Controllers
 {
     public class UserController : Controller
     {
-        private IRepository<User, SQLServerContext> userSQLRepo;
+        private IUserRepo userSQLRepo;
+        private IRoleRepo RoleRepo;
         private IRepository<User, MySQLContext> userMySQLRepo;
 
-        public UserController(IRepository<User, SQLServerContext> _userSQLRepo, IRepository<User, MySQLContext> _userMySQLRepo)
+        public UserController(IUserRepo _userSQLRepo, IRoleRepo _RoleRepo, IRepository<User, MySQLContext> _userMySQLRepo)
         {
+            RoleRepo = _RoleRepo;
             userSQLRepo = _userSQLRepo;
             userMySQLRepo = _userMySQLRepo;
         }
@@ -65,20 +67,59 @@ namespace L.Pos.Web.Controllers
         // GET: User/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            User user = userSQLRepo.GetBy(x => x.ID == id);
+            return View(user);
         }
 
         // POST: User/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, User _user)
         {
             try
             {
                 // TODO: Add update logic here
+                userSQLRepo.BeginTransaction();
+                User user = userSQLRepo.GetBy(x => x.ID == id);
+                user.Username = _user.Username;
+                user.Password = _user.Password;
+                userSQLRepo.Update(user);
 
+                User user2 = userSQLRepo.GetBy(x => x.ID == id);
+                //userSQLRepo.Delete(user2);
+
+                //Role role = RoleRepo.GetBy(x => x.Name == "test");
+                //if (role == null)
+                //{
+                //    RoleRepo.BeginTransaction();
+                //    role = new Role();
+                //    role.Name = "test";
+                //    role.ID = "test";
+                //    RoleRepo.Create(role);
+                //    RoleRepo.Commit();
+                //}
+
+                ////role = RoleRepo.GetBy(x => x.Name == "test");
+                //if (role != null)
+                //{
+                //    RoleRepo.BeginTransaction();
+                //    role = new Role();
+                //    role.Name = "test123123";
+                //    role.ID = "test";
+                //    RoleRepo.Update(role);
+                //    RoleRepo.Commit();
+                //}
+
+                //role = RoleRepo.GetBy(x => x.Name == "test");
+                //if (role != null)
+                //{
+                //    RoleRepo.BeginTransaction();
+                //    RoleRepo.Delete(role);
+                //    RoleRepo.Commit();
+                //}
+                userSQLRepo.Commit();
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
                 return View();
             }

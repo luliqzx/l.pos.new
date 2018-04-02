@@ -28,7 +28,6 @@ namespace L.Pos.DataAccess.Common
             new SchemaUpdate(cfg)
                 .Execute(false, true);
         }
-
     }
 
     public class SQLServerContext : DatabaseContext
@@ -38,7 +37,10 @@ namespace L.Pos.DataAccess.Common
             FluentConfiguration fc = Fluently.Configure();
             fc.Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c.FromConnectionStringWithKey("mssqlserverconn")))
                           //.Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.Load("QCEntities")))
-                          .Mappings(m => m.FluentMappings.Add<UserMap>());
+                          .Mappings(m => m.FluentMappings
+                            .Add<UserMap>()
+                            .Add<RoleMap>()
+                          );
             if (RunIn == RunIn.Web)
             {
                 fc.CurrentSessionContext<WebSessionContext>();

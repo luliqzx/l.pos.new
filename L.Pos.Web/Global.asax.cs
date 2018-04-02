@@ -34,12 +34,19 @@ namespace L.Pos.Web
             container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
 
             // Register your types, for instance:
+            #region SQL Server DB
             container.Register<SQLServerContext>(Lifestyle.Singleton);
             container.Register<IUnitOfWork<SQLServerContext>, UnitOfWork<SQLServerContext>>(Lifestyle.Singleton);
+            container.Register<IUserRepo, UserRepo>(Lifestyle.Scoped);
+            container.Register<IRoleRepo, RoleRepo>(Lifestyle.Scoped);
+            #endregion
+
+            #region Others DB
             container.Register<MySQLContext>(Lifestyle.Singleton);
             container.Register<IUnitOfWork<MySQLContext>, UnitOfWork<MySQLContext>>(Lifestyle.Singleton);
-            container.Register<IRepository<User, SQLServerContext>, Repository<User, SQLServerContext>>(Lifestyle.Transient);
-            container.Register<IRepository<User, MySQLContext>, Repository<User, MySQLContext>>(Lifestyle.Transient);
+            container.Register<IRepository<User, MySQLContext>, Repository<User, MySQLContext>>(Lifestyle.Scoped);
+            #endregion
+
 
             // This is an extension method from the integration package.
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());

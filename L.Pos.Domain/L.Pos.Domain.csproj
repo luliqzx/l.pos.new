@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Entity\BaseT.cs" />
+    <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\TEntity.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

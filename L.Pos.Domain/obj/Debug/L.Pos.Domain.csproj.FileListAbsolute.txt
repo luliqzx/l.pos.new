@@ -2,3 +2,4 @@ D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Domain\bin\Debug\L.Pos.Domain.dll
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Domain\bin\Debug\L.Pos.Domain.pdb
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Domain\obj\Debug\L.Pos.Domain.dll
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Domain\obj\Debug\L.Pos.Domain.pdb
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Domain\obj\Debug\L.Pos.Domain.csprojResolveAssemblyReference.cache
