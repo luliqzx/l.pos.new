@@ -96,3 +96,9 @@ D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\SimpleInjector.Integration.Web.Mvc.dll
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\SimpleInjector.xml
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\SimpleInjector.Integration.Web.xml
 D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\SimpleInjector.Integration.Web.Mvc.xml
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Net.Http.Formatting.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Web.Http.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Web.Http.WebHost.dll
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Net.Http.Formatting.xml
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Web.Http.xml
+D:\Lucky\Me\P\L.Pos\L.Pos\L.Pos.Web\bin\System.Web.Http.WebHost.xml

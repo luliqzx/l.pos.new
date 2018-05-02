@@ -8,16 +8,21 @@ using System.Threading.Tasks;
 
 namespace L.Pos.DataAccess.Map
 {
-    public class UserMap : ClassMap<User>
+    public class MenuMap : ClassMap<Menu>
     {
-        public UserMap()
+        public MenuMap()
         {
-            Id(x => x.ID).GeneratedBy.Identity();
-            Map(x => x.Username).Length(25).Unique().Not.Nullable();
-            Map(x => x.Password);
-
-            HasManyToMany(x => x.Roles).Table("UserRole");
+            Id(x => x.ID).Length(10).GeneratedBy.Assigned();
             Map(x => x.Name);
+
+            Map(x => x.Active).Default("Y").Length(1);
+            Map(x => x.Public).Default("Y").Length(1);
+            Map(x => x.URL);
+            Map(x => x.PageMenu);
+            Map(x => x.Controller);
+            Map(x => x.Action);
+
+            HasMany(x => x.RoleMenus);
 
             #region Audit Trail
             Map(x => x.CreateBy);
@@ -31,3 +36,5 @@ namespace L.Pos.DataAccess.Map
         }
     }
 }
+
+

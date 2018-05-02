@@ -10,5 +10,9 @@ namespace L.Pos.Domain.Entity
     {
         public virtual string Username { get; set; }
         public virtual string Password { get; set; }
+
+        public virtual string Name { get; set; }
+
+        public virtual IList<Role> Roles { get; set; }
     }
 }

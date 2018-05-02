@@ -40,6 +40,9 @@ namespace L.Pos.DataAccess.Common
                           .Mappings(m => m.FluentMappings
                             .Add<UserMap>()
                             .Add<RoleMap>()
+                            .Add<RoleMenuMap>()
+                            .Add<MenuMap>()
+                            .Add<PrivilegeMap>() 
                           );
             if (RunIn == RunIn.Web)
             {

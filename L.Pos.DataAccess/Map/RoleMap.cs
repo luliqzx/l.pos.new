@@ -12,9 +12,10 @@ namespace L.Pos.DataAccess.Map
     {
         public RoleMap()
         {
-            Id(x => x.ID).GeneratedBy.Assigned();
+            Id(x => x.ID).Length(10).GeneratedBy.Assigned();
             Map(x => x.Name).Length(50).Unique().Not.Nullable();
-            References(x => x.MainRole, "MainRole").Cascade.All();
+            //References(x => x.MainRole);
+            HasMany(x => x.RoleMenu);
         }
     }
 }

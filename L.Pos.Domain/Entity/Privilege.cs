@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace L.Pos.Domain.Entity
 {
-    public class Role : TEntity<string>
+    public class Privilege : BaseT<string>
     {
         public virtual string Name { get; set; }
-        //public virtual Role MainRole { get; set; }
-        public virtual IList<RoleMenu> RoleMenu { get; set; }
     }
 }

@@ -14,6 +14,6 @@ namespace L.Pos.Domain.Entity
         public virtual string UpdateBy { get; set; }
         public virtual DateTime? UpdateDate { get; set; }
         public virtual string UpdateTerminal { get; set; }
-        public virtual DateTime? Timestamp { get; set; }
+        public virtual DateTime? Row_Version { get; set; }
     }
 }

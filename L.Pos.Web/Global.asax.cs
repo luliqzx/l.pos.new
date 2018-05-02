@@ -13,6 +13,7 @@ using System.Reflection;
 using SimpleInjector.Integration.Web.Mvc;
 using L.Pos.Domain.Entity;
 using L.Pos.DataAccess.Common;
+using System.Web.Http;
 
 namespace L.Pos.Web
 {
@@ -23,6 +24,8 @@ namespace L.Pos.Web
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            GlobalConfiguration.Configure(WebApiConfig.Register);
 
             Bootstrap();
         }
